@@ -44,5 +44,35 @@ body {
 }
 
 #logo1 {
-    flex: ;
+   display: block;
+   margin: auto;
+   position: relative;
+   bottom: 335px;
+}
+
+#info- {
+
+    font-family: "Baloo 2", sans-serif;
+  font-optical-sizing: auto;
+  font-weight:500;
+  font-style: normal;
+  margin-left: 95px;
+  position: relative; 
+  top: -733px;
+  font-size: 16.7px;
+
+}
+
+#info-logo {
+    margin-left: 12px;
+  position: relative; 
+  top: -760px;
+}
+
+#home {
+  margin-right: 65%;
+  font-family: "Rubik Mono One", monospace;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 55px;
 }
