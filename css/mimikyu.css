@@ -66,7 +66,7 @@ body {
 #info-logo {
     margin-left: 12px;
   position: relative; 
-  top: -940px;
+  top: -1457px;
 }
 
 #home {
@@ -118,11 +118,18 @@ font-family: "Baloo 2", sans-serif;
   font-size: 29px;
   padding: 20px;
   line-height: 1.3;
-  
-  
-
-  
  
+}
+
+#resume {
+height: 542px;
+width: 416px;
+margin-left: -48px;
+bottom: 270px;
+position: relative;
+border: 5px solid #000000;
+padding: 20px;
+
 }
 
 
