@@ -315,7 +315,7 @@ font-family: "Rubik Mono One", monospace;
   transform: none !important; 
 }
 
-/* Smoothly fades in the active image layout */
+
 #slide1:checked ~ .item-one,
 #slide2:checked ~ .item-two,
 #slide3:checked ~ .item-three {
