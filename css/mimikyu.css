@@ -20,7 +20,7 @@ body {
 
 #main-container {
     width: 1024px;
-    height: 2100px;
+    height: 2200px;
     border: solid 1px black;
     position: relative;
 }
@@ -104,7 +104,7 @@ body {
     width: 700px;
     margin: auto;
     position: relative;
-    bottom: 375px;
+    bottom: 380px;
     border-radius: 28px;
     border-width: 4px;
     text-align: center;
@@ -140,7 +140,7 @@ padding: 20px;
         font-size: 51px;
         margin-left: 170px;
    
-bottom:380px;
+bottom:280px;
 position: relative;
 }
 
@@ -171,11 +171,11 @@ position: relative;
 }
 
 #callout {
-  margin-left: 475px;
-  margin-top: -700px;
+  margin-left: 450px;
+  margin-top: -800px;
   position: relative;
   width: fit-content;
-  scale: 75%;
+  scale: 65%;
 }
 
 
@@ -187,20 +187,20 @@ font-family: "Rubik Mono One", monospace;
   position: absolute;
   text-align: center;
   line-height: 8px;
-  margin-left: 575px;
+  margin-left: 550px;
   margin-top: -450px;
-  scale: 75%;
+  scale: 65%;
 }
 
 #my-skills {
   display: flex;
     border: 2px solid #000000;
-    width: 707px;
+    width: 907px;
     height: 627px;
     border-radius: 28px;
     border-width: 6px;
-    margin-left: 250px;
-    margin-top: 275px;
+    margin-left: 50px;
+    margin-top: 450px;
 
 }
 
@@ -261,37 +261,26 @@ font-family: "Rubik Mono One", monospace;
 }
 
 
-#slideshow-right {
-  height: 400px;
-  width: 400px;
-  border: solid 1px black;
-  position: absolute;
-  right: 35px;
-  top: 1000px;
-}
 .gallery-container {
-  /* Layout: Grid track system configured to slide heights open from zero */
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 0fr;   
+  /* 1. GRID ENGINE: Sets a flexible, content-driven layout */
+  display: inline-grid; 
+  grid-template-columns: max-content;
+  grid-template-rows: max-content;
   
-  /* Positioning coordinates matching your canvas */
-  position: absolute;
-  top: 1040px;              
-  left: 540px;              
-  width: 350px;             
+  /* Positioning coordinates on your 1024px grid canvas */
+  position: absolute; 
+  top: 887px; 
+  left: 620px; 
 
-  /* Theme Borders */
-  border: 7px solid #000000;
-  background-color: #ffffff;
-  padding: 15px;
-  z-index: 10;
-  box-sizing: border-box;
-  border-radius: 20px;
-
-  /* Animation tool: This dynamically morphs the container box height */
-  transition: grid-template-rows 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+  /* Theme Borders matching your portfolio aesthetic */
+  border: 7px solid #000000; 
+  background-color: #ffffff; 
+  padding: 15px; 
+  z-index: 10; 
+  box-sizing: border-box; 
+  border-radius: 20px; 
 }
+
 
 
  /* Hide functional control inputs */
@@ -299,38 +288,31 @@ font-family: "Rubik Mono One", monospace;
   display: none;
 }
 
-.gallery-container .slide {
+/* 2. THE CARD-STACKING METHOD */
+.gallery-container .slide { 
   grid-column: 1;
   grid-row: 1;
   cursor: pointer;
-  overflow: hidden;         /* Prevents large photos from spilling during animations */
   
-  /* Uses opacity fade parameters instead of display:none so sizing data remains readable */
+  /* CRITICAL: Collapse layout properties so hidden images don't leave ghost space */
+  visibility: collapse;
   opacity: 0;
-  visibility: hidden;
   pointer-events: none;
+}
+
+
+
+.slide img { 
+  display: block !important; 
+  width: auto !important;       /* Lets the image determine its natural width */
+  height: auto !important;      /* Lets the image determine its natural height */
+  max-width: 350px !important;  /* Safety barrier so wide images don't break section space */
+  max-height: 450px !important; /* Safety barrier so tall images don't stretch page space */
   
-  /* Smoothly transitions the fading image */
-  transition: opacity 0.3s ease, visibility 0.3s ease;
-}
-
-
-
-/* Standardizes image metrics and deletes legacy scaling interference */
-.slide img {
-  display: block !important;
-  width: 100% !important;   
-  height: auto !important;  
-  scale: 100% !important;   
-  margin: 0 !important;     
-  transform: none !important;
-}
-
-
-.gallery-container:has(#slide1:checked),
-.gallery-container:has(#slide2:checked),
-.gallery-container:has(#slide3:checked) {
-  grid-template-rows: 1fr;
+  /* Strips out inherited external stylesheet formatting noise */
+  scale: 100% !important; 
+  margin: 0 !important; 
+  transform: none !important; 
 }
 
 /* Smoothly fades in the active image layout */
