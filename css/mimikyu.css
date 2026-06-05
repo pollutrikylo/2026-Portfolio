@@ -261,65 +261,347 @@ font-family: "Rubik Mono One", monospace;
 }
 
 
-.gallery-container {
-  /* 1. GRID ENGINE: Sets a flexible, content-driven layout */
-  display: inline-grid; 
+body {
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  justify-content: center;
+
+
+  
+}
+
+
+
+#top-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 1024px;
+  height: 92px;
+  background-color: #000000;
+}
+
+#main-container {
+  width: 1024px;
+  height: 2200px;
+  border: solid 1px black;
+  position: relative;
+}
+
+#box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 1024px;
+  height: 305px;
+  background-color: #dcf2fd;
+}
+
+#top-text {
+
+      font-family: "Modak", system-ui;
+      font-weight: 400;
+      font-style: normal;
+    font-size: 48pt;
+  color: white;
+  
+}
+
+#logo1 {
+ display: block;
+ margin: auto;
+ position: relative;
+ bottom: 335px;
+}
+
+#info- {
+
+  font-family: "Baloo 2", sans-serif;
+font-optical-sizing: auto;
+font-weight:550;
+font-style: normal;
+margin-left: 95px;
+position: relative; 
+top: -733px;
+font-size: 16.7px;
+
+}
+
+#info-logo {
+  margin-left: 12px;
+position: relative; 
+top: -935px;
+}
+
+#home {
+margin-right: 400px;
+font-family: "Rubik Mono One", monospace;
+font-weight: 400;
+font-style: normal;
+font-size: 55px;
+margin-top: 55px;
+text-decoration: underline;
+text-underline-offset: 20px;
+text-decoration-thickness: 4.5px;
+}
+
+#page {
+font-family: "Rubik Mono One", monospace;
+font-weight: 400;
+font-style: normal;
+font-size: 55px;
+margin-left: 130px;
+margin-top: 55px;
+text-decoration: underline;
+text-underline-offset: 20px;
+text-decoration-thickness: 4.5px;
+}
+
+#round-box {
+
+display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #000000;
+  height: 164px;
+  width: 700px;
+  margin: auto;
+  position: relative;
+  bottom: 380px;
+  border-radius: 28px;
+  border-width: 4px;
+  text-align: center;
+
+}
+
+#intro {
+font-family: "Baloo 2", sans-serif;
+font-optical-sizing: auto;
+font-weight: 500;
+font-style: normal;
+font-size: 29px;
+padding: 20px;
+line-height: 1.3;
+
+}
+
+#resume {
+height: 542px;
+width: 416px;
+margin-left: -48px;
+bottom: 270px;
+position: relative;
+border: 5px solid #000000;
+padding: 20px;
+
+}
+
+#resume-text {
+font-family: "Modak", system-ui;
+      font-weight: 400;
+      font-style: normal;
+      font-size: 51px;
+      margin-left: 170px;
+ 
+bottom:280px;
+position: relative;
+}
+
+.zoom-container input[type="checkbox"] {
+display: none;
+}
+
+.zoom-container img {
+width: 446.25px;
+height: 577.25px;
+border: 7px solid black;
+background-color: white;
+padding: 20px;
+margin-left: 48px;
+margin-top: -350px;
+}
+
+.zoom-container input[type="checkbox"]:checked ~ img {
+transform: scale(2.0);
+cursor: zoom-out;
+display: flex;
+align-items: center;
+justify-content: center;
+position: relative;
+margin-left: 265px;
+z-index: 100;
+
+}
+
+#callout {
+margin-left: 450px;
+margin-top: -800px;
+position: relative;
+width: fit-content;
+scale: 65%;
+}
+
+
+#cte {
+font-family: "Rubik Mono One", monospace;
+font-weight: 400;
+font-style: normal;
+font-size: 40px;
+position: absolute;
+text-align: center;
+line-height: 8px;
+margin-left: 550px;
+margin-top: -450px;
+scale: 65%;
+}
+
+#my-skills {
+display: flex;
+  border: 2px solid #000000;
+  width: 907px;
+  height: 627px;
+  border-radius: 28px;
+  border-width: 6px;
+  margin-left: 50px;
+  margin-top: 120px;
+
+}
+
+#skillz {
+font-family: "Modak", system-ui;
+      font-weight: 400;
+      font-style: normal;
+      font-size: 43px;
+      white-space: nowrap;
+      margin-left: 20px;
+      margin-top: 40px;
+     
+      
+}
+
+#points {
+display: flexbox;
+font-family: "Baloo 2", sans-serif;
+font-optical-sizing: auto;
+font-weight: 500;
+font-style: normal;
+margin-top: 110px;
+margin-left: -400px;
+font-size: 30.5px;
+line-height: 40px;
+}
+
+
+
+#adobe-apps {
+width: 120.75px;
+height: 122.25px;
+
+
+}
+
+#technical {
+height: 121px;
+
+}
+
+#socialmedia {
+height: 104.75px;
+width: auto;
+
+}
+
+
+.icons {
+display: flex;
+flex-direction: column; 
+align-items: center;    
+gap: 70px;
+margin-left: 750px;
+margin-top: -550px;
+padding-right: 40px;              
+
+}
+
+#slideshow-right.gallery-container {
+  /* Tells the container to wrap like a rubber band around only the visible image */
+  display: inline-grid;
   grid-template-columns: max-content;
   grid-template-rows: max-content;
   
-  /* Positioning coordinates on your 1024px grid canvas */
-  position: absolute; 
-  top: 887px; 
-  left: 620px; 
+  /* Your exact layout coordinates */
+  position: absolute;
+  top: 887px;
+  left: 600px;
 
-  /* Theme Borders matching your portfolio aesthetic */
-  border: 7px solid #000000; 
-  background-color: #ffffff; 
-  padding: 15px; 
-  z-index: 10; 
-  box-sizing: border-box; 
-  border-radius: 20px; 
+  /* Thick black cartoon border style */
+  border: 7px solid #000000;
+  background-color: #ffffff;
+  padding: 15px;
+  z-index: 10;
+  box-sizing: border-box;
+  border-radius: 20px;
 }
 
-
-
- /* Hide functional control inputs */
- input[name="portfolio-slides"] {
+/* Hide functional control radio inputs */
+input[name="portfolio-slides"] {
   display: none;
 }
 
-/* 2. THE CARD-STACKING METHOD */
-.gallery-container .slide { 
+/* Forces all slide items to stack directly on top of each other */
+.gallery-container .slide {
   grid-column: 1;
   grid-row: 1;
   cursor: pointer;
   
-  /* CRITICAL: Collapse layout properties so hidden images don't leave ghost space */
-  visibility: collapse;
-  opacity: 0;
-  pointer-events: none;
+  /* CRITICAL CHANGE: display: none completely strips inactive images from the box size math */
+  display: none; 
 }
 
-
-
-.slide img { 
-  display: block !important; 
-  width: auto !important;       /* Lets the image determine its natural width */
-  height: auto !important;      /* Lets the image determine its natural height */
-  max-width: 350px !important;  /* Safety barrier so wide images don't break section space */
-  max-height: 450px !important; /* Safety barrier so tall images don't stretch page space */
+/* Forces images to maintain their true, uncropped proportions */
+.slide img {
+  display: block !important;
+  width: auto !important;        /* Auto-calculates exact width from your original file */
+  height: auto !important;       /* Auto-calculates exact height from your original file */
   
-  /* Strips out inherited external stylesheet formatting noise */
-  scale: 100% !important; 
-  margin: 0 !important; 
-  transform: none !important; 
+  /* SAFETY LIMIT: Stops giant high-res files from pushing elements off your screen layout */
+  max-width: 350px !important;   
+  max-height: 450px !important;  
+  
+  /* Clears old layout interference noise */
+  scale: 100% !important;
+  margin: 0 !important;
+  transform: none !important;
 }
 
-
+/* ==========================================================================
+   STATE ENGINE: Displays ONLY the specific active image path clicked
+   ========================================================================== */
 #slide1:checked ~ .item-one,
 #slide2:checked ~ .item-two,
 #slide3:checked ~ .item-three {
-  opacity: 1;
-  visibility: visible;
-  pointer-events: auto;
+  display: block;
+}
+
+#ctgtp {
+  display: flex;
+  border: 4px solid #000000;
+  height: 60px;
+  width: 420px;
+  transform: translate(550px, 330px);
+  align-items: center;
+  justify-content: center;
+}
+
+#slideshow-text {
+  font-family: "Baloo 2", sans-serif;
+font-optical-sizing: auto;
+font-weight: 500;
+font-style: normal;
+font-size: 30px;
+}
+
+#arrow {
+  scale: 20%;
+  transform: translate(3700px, 569px);
 }
